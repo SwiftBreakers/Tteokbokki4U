@@ -108,8 +108,9 @@ override func viewDidLoad() {
 @objc func appWillEnterForeground() {
     updatePinImages()
 }
-</details>
 ```
+</details>
+
 
 ## 애플 및 유져의 피드백 반영
 
