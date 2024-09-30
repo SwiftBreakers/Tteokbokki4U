@@ -1,10 +1,11 @@
 # Table of Contents
 1. [Description](#description)
-2. [Demo](#Demo)
-3. [Main Feature](#main-feature)
-4. [Stacks](#stacks)
-5. [Project Structure](#project-structure)
-6. [Developer](#developer)
+2. [Developer](#developer)
+3. [Demo](#Demo)
+4. [Main Feature](#main-feature)
+5. [Stacks](#stacks)
+6. [Project Structure](#project-structure)
+7. 
 
 # 🍍Fine Apple Store🍍
 
@@ -15,6 +16,12 @@ Apple 제품을 빠르고 간편하게 쇼핑하자! Fine Apple Store!
 Apple 제품에대한 소식을 빠르게, 편하게, 싸게 구입 할 수 있는 Fine Apple Store입니다.
 
 새로내운 제품은 물론 제품 정보도 한눈에 간편하게!
+
+## Developer
+*  **송동익** ([Haroldfromk](https://github.com/haroldfromk))
+*  **박미림** ([moremirim](https://github.com/moremirim))
+*  **박준영** ([labydin](https://github.com/labydin))
+*  **최진문** ([jinmoon23](https://github.com/jinmoon23))
 
 ## Demo
 <p float="left">
@@ -98,8 +105,4 @@ Fine Apple Store Kiosk
 └ 
 ```
 
-## Developer
-*  **송동익** ([Haroldfromk](https://github.com/haroldfromk))
-*  **박미림** ([moremirim](https://github.com/moremirim))
-*  **박준영** ([labydin](https://github.com/labydin))
-*  **최진문** ([jinmoon23](https://github.com/jinmoon23))
+
