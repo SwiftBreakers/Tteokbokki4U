@@ -13,9 +13,8 @@ Apple 제품을 빠르고 간편하게 쇼핑하자! Fine Apple Store!
 
 ## Description
 
-Apple 제품에대한 소식을 빠르게, 편하게, 싸게 구입 할 수 있는 Fine Apple Store입니다.
+![TPK_poster](https://github.com/user-attachments/assets/54c5ef79-f0ab-4ac1-b1c4-0679b651279d)
 
-새로내운 제품은 물론 제품 정보도 한눈에 간편하게!
 
 ## Developer
 *  **송동익** ([Haroldfromk](https://github.com/haroldfromk))
