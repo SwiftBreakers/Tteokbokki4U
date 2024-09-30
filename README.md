@@ -8,7 +8,7 @@
 7. 
 
 # 🍍Fine Apple Store🍍
-<img src="https://img.shields.io/badge/Apple-%23000000.svg?style=for-the-badge&logo=apple&logoColor=white" height="20"> <img src="https://img.shields.io/badge/iOS-16.0%2B-green"> <img src="https://img.shields.io/badge/Library-Combine-FF7043 "> <img src="https://img.shields.io/badge/Library-Firebase-308C4A "> <img src="https://img.shields.io/badge/Library-KakaoOpenSDK-308C4A "> <img src="https://img.shields.io/badge/Library-ProgressHUD-308C4A "> <img src="https://img.shields.io/badge/Library-SnapKit-308C4A ">
+<img src="https://img.shields.io/badge/Apple-%23000000.svg?style=for-the-badge&logo=apple&logoColor=white" height="20"> <img src="https://img.shields.io/badge/iOS-16.0%2B-green"> <img src="https://img.shields.io/badge/Library-Combine-FF7043 "> <img src="https://img.shields.io/badge/Library-Firebase-FF7043 "> <img src="https://img.shields.io/badge/Library-KakaoOpenSDK-308C4A "> <img src="https://img.shields.io/badge/Library-ProgressHUD-308C4A "> <img src="https://img.shields.io/badge/Library-SnapKit-308C4A ">
 
 ## Description
 
