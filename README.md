@@ -60,7 +60,7 @@
 ## 기술적 의사결정
 
 <details>
-<summary>### Architecture</summary>
+<summary>1. Architecture</summary>
 
 **MVVM**
 
@@ -71,7 +71,7 @@
 </details>
 
 <details>
-<summary>### 매커니즘 회의</summary>
+<summary>2. 매커니즘 회의</summary>
 
 - 커뮤니티 입장 시 닉네임 설정에 관한 메커니즘 회의  
     ![닉네임 설정 이미지](이미지 경로)
@@ -79,7 +79,7 @@
 </details>
 
 <details>
-<summary>### Firebase</summary>
+<summary>3. Firebase</summary>
 
 > **✅ 전체 데이터의 Firebase 관리**
 
