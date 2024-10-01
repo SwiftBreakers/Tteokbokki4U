@@ -59,7 +59,8 @@
 
 ## 기술적 의사결정
 
-### Architecture
+<details>
+<summary>### Architecture</summary>
 
 **MVVM**
 
@@ -67,42 +68,56 @@
 - Combine 도입
     - Firebase의 데이터의 **`변화를 감지`**하여 필요한 변경사항을 **`즉각 적용`**
 
-### 매커니즘 회의
+</details>
 
-- 커뮤니티 입장 시 닉네임 설정에 관한 메커니즘 회의
-    
-    ![CleanShot 2024-07-03 at 00.35.25@2x.png](%5B%E1%84%84%E1%85%A5%E1%86%A8%E1%84%87%E1%85%A9%E1%86%A9%E1%84%8B%E1%85%B54U%5D%20-%20%E1%84%8B%E1%85%AE%E1%84%85%E1%85%B5%E1%84%80%E1%85%A1%20%E1%84%86%E1%85%A1%E1%86%AB%E1%84%83%E1%85%B3%E1%84%82%E1%85%B3%E1%86%AB%20%E1%84%87%E1%85%AE%E1%86%AB%E1%84%89%E1%85%B5%E1%86%A8%20%E1%84%8C%E1%85%B5%E1%84%83%E1%85%A9%20(1)%20871cca0c88be4121916f39751b24cdb5/CleanShot_2024-07-03_at_00.35.252x.png)
-    
+<details>
+<summary>### 매커니즘 회의</summary>
 
-### Firebase
+- 커뮤니티 입장 시 닉네임 설정에 관한 메커니즘 회의  
+    ![닉네임 설정 이미지](이미지 경로)
 
-> **✅ 전체 데이터의 Firebase 관리**
-> 
-- 데이터 모델링
-    
-    ![CleanShot 2024-07-03 at 00.37.43@2x.png](%5B%E1%84%84%E1%85%A5%E1%86%A8%E1%84%87%E1%85%A9%E1%86%A9%E1%84%8B%E1%85%B54U%5D%20-%20%E1%84%8B%E1%85%AE%E1%84%85%E1%85%B5%E1%84%80%E1%85%A1%20%E1%84%86%E1%85%A1%E1%86%AB%E1%84%83%E1%85%B3%E1%84%82%E1%85%B3%E1%86%AB%20%E1%84%87%E1%85%AE%E1%86%AB%E1%84%89%E1%85%B5%E1%86%A8%20%E1%84%8C%E1%85%B5%E1%84%83%E1%85%A9%20(1)%20871cca0c88be4121916f39751b24cdb5/CleanShot_2024-07-03_at_00.37.432x.png)
-    
-- **💡** Firebase
-    - (선택 이유) 이용자들끼리 **`상호작용`**이 많은 커뮤니티 어플의 특성 상 서버기반의 Database 선택
+</details>
+
+<details>
+<summary>### Firebase</summary>
+
+> **✅ 전체 데이터의 Firebase 관리**
+
+- 데이터 모델링  
+    ![데이터 모델링 이미지](이미지 경로)
+
+- **💡 Firebase**
+    - (선택 이유) 이용자들 간 **`상호작용`**이 많은 커뮤니티 앱 특성 상 서버 기반 Database 선택
         - 다른 유저의 가게 리뷰 보기
         - 실시간 채팅 기능
-    - 유저 관리, 추천페이지, 공지사항 등 **`서버 기반 관리 가능`**
+    - 유저 관리, 추천 페이지, 공지사항 등 **`서버 기반 관리 가능`**
 
-### **코드 일관성과 협업 효율성을 위한 전역 변수 및** 공통 함수 ****사용
+</details>
 
-- Firebase 특성상 Field를 문자열로 입력하기에, 입력도중 문자열의 실수를 방지하기 위해 전역 변수로 만들어서 Firebase를 사용하는 팀원 모두가 필요할때마다 추가하고 적극 사용을 장려
-    - 파이어베이스 컬렉션을 가져오는 부분또한 하나의 변수로 정의
-        - ex) **`let** noticeCollection = Firestore.firestore().collection("notice")`
-    - 각각의 필드를 변수로 정의
-        - ex) **`let** db_uid = "uid"`
-- UIDesign 특성상 Team Color, Font를 설정하였고, 일일이 하나씩 각자가 설정하는것 보다는 위와 같은 방식으로 전역 변수로 만들어서 팀원 모두에게 사용을 장려
-    - 메인 색상와 메인 폰트에 대해 정의
-        - ex) **`static** **let** mainOrange = UIColor(hexString: "FE724C")`
-        - ex) **`static** **func** fontELight (size: CGFloat = 18 ) -> UIFont { UIFont(name: "Pretendard-ExtraLight", size: size)! }`
-- 반복되는 얼럿창에 대해 함수로 통일
-    - UIViewController의 Extension으로 Alert 구현에 대해 하나의 함수 개념으로 사용
-        - ex) `showMessage`
-        - ex) `showMessageWithCancel`
+<details>
+<summary>### 코드 일관성과 협업 효율성을 위한 전역 변수 및 공통 함수 사용</summary>
+
+- Firebase의 Field 입력 실수 방지를 위한 전역 변수 관리  
+    ```swift
+    let noticeCollection = Firestore.firestore().collection("notice")
+    let db_uid = "uid"
+    ```
+
+- Team Color 및 Font 전역 변수로 설정  
+    ```swift
+    static let mainOrange = UIColor(hexString: "FE724C")
+    static func fontELight(size: CGFloat = 18) -> UIFont { 
+        UIFont(name: "Pretendard-ExtraLight", size: size)! 
+    }
+    ```
+
+- 반복되는 Alert창에 대해 통일된 함수 사용  
+    ```swift
+    showMessage
+    showMessageWithCancel
+    ```
+
+</details>
 
 ## 트러블슈팅
 
