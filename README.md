@@ -50,50 +50,56 @@
 <details>
 <summary>1. 로그인 페이지</summary>
 
-- **트러블 & 해결과정**
-    > 트러블:  
-    - 로그인을 할 때 Completion Handler 사용으로 단발성 로그인만 가능한 문제가 발생.
-    
-    > 해결과정:  
-    - `PassthroughSubject<Result<Void, Error>, Never>()`으로 수정하여 에러와 성공 상태를 처리.
-    
-    - `PassthroughSubject<Void, Error>()`의 리턴 타입에서 에러 처리와 Completion 발생으로 인해 발생한 문제를 해결하고, 이후 로그인 재시도가 가능하게끔 변경.
+### 🛠 트러블 & 해결과정 🔧
+
+#### 🚧 트러블:
+- 로그인을 할 때 **Completion Handler** 사용으로 인해 단발성 로그인만 가능한 문제가 발생.
+
+#### ✅ 해결과정:
+- `PassthroughSubject<Result<Void, Error>, Never>()`으로 수정하여 에러와 성공 상태를 처리.
+- `PassthroughSubject<Void, Error>()`의 리턴 타입에서 에러 처리 및 Completion 발생 문제를 해결하고, 이후 로그인 재시도가 가능하도록 변경.
     
 </details>
 
 <details>
 <summary>2. 추천 페이지</summary>
 
-- **트러블 & 해결과정**
-    > 트러블 1:  
-    - FB 데이터를 불필요하게 쌓아 무작위로 CardView가 표시되는 문제.
-    
-    > 해결과정:  
-    - FB order 필드를 추가하여 정렬하고, fetch 시 removeAll로 데이터 중복 문제 해결.
+### 🛠 트러블 & 해결과정 🔧
 
-    > 트러블 2:  
-    - 페이지 재진입 시 모든 CardCell에 대해 Fetch를 다시 실행하는 문제.
+#### 🚧 트러블 1:
+- **문제**: FB 데이터를 불필요하게 쌓아 무작위로 CardView가 표시되는 문제 발생.
 
-    > 해결과정:  
-    - 불필요한 코드를 제거하여 Fetch 중복을 방지하고, 북마크 동기화 기능은 유지.
+#### ✅ 해결과정:
+- FB order 필드를 추가하여 정렬하고, `fetch` 시 `removeAll`로 데이터 중복 문제 해결.
 
-    > 트러블 3:  
-    - 모든 데이터를 한번에 로드해 첫 화면 로딩 시간이 길어짐.
+---
 
-    > 해결과정:  
-    - 필요한 데이터부터 우선적으로 로드하여 화면 표시 시간을 단축하고, 상세 페이지에서 이미지가 빠르게 로드되도록 구현.
+#### 🚧 트러블 2:
+- **문제**: 페이지 재진입 시 모든 CardCell에 대해 Fetch를 다시 실행하는 문제.
+
+#### ✅ 해결과정:
+- 불필요한 코드를 제거하여 Fetch 중복을 방지하고, 북마크 동기화 기능은 유지.
+
+---
+
+#### 🚧 트러블 3:
+- **문제**: 모든 데이터를 한 번에 로드해 첫 화면 로딩 시간이 길어짐.
+
+#### ✅ 해결과정:
+- 필요한 데이터부터 우선적으로 로드하여 화면 표시 시간을 단축, 상세 페이지에서 이미지를 빠르게 로드하도록 구현.
     
 </details>
 
 <details>
 <summary>3. 지도 페이지</summary>
 
-- **트러블 & 해결과정**
-    > 트러블:  
-    - background에서 foreground로 전환 시 custom annotation의 이미지가 보이지 않음.
-    
-    > 해결과정:  
-    - `Notification`과 `UIApplication.willEnterForegroundNotification`을 사용해 foreground 전환 시 이미지를 업데이트하도록 구현.
+### 🛠 트러블 & 해결과정 🔧
+
+#### 🚧 트러블:
+- background에서 foreground로 전환 시 **custom annotation** 이미지가 보이지 않는 문제 발생.
+
+#### ✅ 해결과정:
+- `Notification`과 `UIApplication.willEnterForegroundNotification`을 사용해 foreground 전환 시 이미지를 업데이트하도록 구현.
 
 ```swift
 override func viewDidLoad() {
