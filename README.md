@@ -95,7 +95,7 @@
 </details>
 
 <details>
-<summary>### 코드 일관성과 협업 효율성을 위한 전역 변수 및 공통 함수 사용</summary>
+<summary>4. 코드 일관성과 협업 효율성을 위한 전역 변수 및 공통 함수 사용</summary>
 
 - Firebase의 Field 입력 실수 방지를 위한 전역 변수 관리  
     ```swift
