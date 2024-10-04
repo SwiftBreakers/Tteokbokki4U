@@ -30,8 +30,8 @@
 <details>
 <summary>1. 로그인</summary>
 
-![로그인 스크린샷](이미지 경로 1)  
-![로그인 스크린샷](이미지 경로 2)
+![simulator_screenshot_C24379EE-13FD-4003-BC9F-3AABF8833397](https://github.com/user-attachments/assets/3bc8d2ea-680f-4042-a016-4557df80632c) 
+![simulator_screenshot_E9C791E9-C767-4AA1-82E8-C155154A0B81](https://github.com/user-attachments/assets/922ae6c8-83a7-41f4-9385-e6c53ceb10ca)
 
 - 소셜 로그인 : 애플, 구글
 - 게스트 모드 로그인
@@ -44,8 +44,8 @@
 <details>
 <summary>2. 관리페이지</summary>
 
-![관리페이지 스크린샷](이미지 경로 1)  
-![관리페이지 스크린샷](이미지 경로 2)
+![simulator_screenshot_6D5E9AB4-3E8A-4F9E-AC99-D4640678B554](https://github.com/user-attachments/assets/0e8adb0f-d6c5-4b92-bf3e-bfe7789af1ea)
+![simulator_screenshot_84FE1E40-18B1-4A54-BE34-107025A9E777](https://github.com/user-attachments/assets/2364f143-2ca0-424b-b194-39276a9bd706)
 
 - 이스터 에그
 - 정확한 위치를 규칙에 맞게 탭한 뒤 관리자 인증 Key를 입력해야 페이지 진입 가능
@@ -56,8 +56,8 @@
 <details>
 <summary>3. 에디터의 추천</summary>
 
-![에디터 추천 스크린샷](이미지 경로 1)  
-![에디터 추천 스크린샷](이미지 경로 2)
+![IMG_8371](https://github.com/user-attachments/assets/797ff426-686d-4ec3-8420-3d414702040e)
+![simulator_screenshot_FD30CF97-9CA1-4386-9DAE-26D4942A47E9](https://github.com/user-attachments/assets/8798eefb-9b03-4c9b-a7ed-761f983cec43)
 
 - [VerticalCardSwiper](https://github.com/JoniVR/VerticalCardSwiper) 라이브러리를 통해 잡지 형식의 둘러보기
 - Card cell 클릭 시 디테일 페이지로 이동
@@ -72,7 +72,7 @@
 <details>
 <summary>4. 지도위의 내 주변 분식집</summary>
 
-![지도위의 분식집 스크린샷](이미지 경로)
+![IMG_8372](https://github.com/user-attachments/assets/04ab15e2-b09e-4fd4-a5ad-51b452f18a0f)
 
 - 내위치 주변 떡볶이집 표시 (공공데이터 기반)
 - 서치바 (지역명 또는 장소명 입력 가능)
@@ -85,8 +85,8 @@
 <details>
 <summary>5. 가게 정보와 리뷰 작성</summary>
 
-![가게 정보 스크린샷](이미지 경로 1)  
-![가게 정보 스크린샷](이미지 경로 2)
+![IMG_AE15C86306E5-1](https://github.com/user-attachments/assets/0205eb8b-e434-41cd-93f9-582c564478de)
+![IMG_56B15ADBBE3D-1](https://github.com/user-attachments/assets/39f798d5-24e2-4bd4-9cba-c2bd157869cc)
 
 - 가게의 상세 정보 및 리뷰 모아보기
 - 리뷰 작성하기 버튼
@@ -98,8 +98,8 @@
 <details>
 <summary>6. 지역기반 오픈톡 커뮤니티</summary>
 
-![오픈톡 커뮤니티 스크린샷](이미지 경로 1)  
-![오픈톡 커뮤니티 스크린샷](이미지 경로 2)
+![IMG_8373](https://github.com/user-attachments/assets/2e5ff2a0-ef22-4160-a6fb-112cb92b0885)
+![IMG_8374](https://github.com/user-attachments/assets/e07d71e7-d44a-4d13-bee1-8bdc64c966a7)
 
 - 각 지역 탭에서 실시간 대화 가능
 - 사진 첨부, 지도 첨부 기능 포함
@@ -110,8 +110,8 @@
 <details>
 <summary>7. 리뷰 갯수로 성장하는 개성있는 떡볶칭호</summary>
 
-![칭호 스크린샷](이미지 경로 1)  
-![칭호 스크린샷](이미지 경로 2)
+![simulator_screenshot_71052AD4-E6BE-4C6A-B78D-DDEBE3639601](https://github.com/user-attachments/assets/d6deb62e-e9b9-42da-ac32-bbebac304cb1)
+![simulator_screenshot_FE2E139F-13F5-4CC2-AD4D-F68B17CEF870](https://github.com/user-attachments/assets/a4ff7eb3-26de-49ac-9fcc-9e57960e48ca)
 
 - 프로필 사진과 닉네임 설정 가능
 - 리뷰 갯수에 따른 칭호 차등 부여
@@ -123,8 +123,10 @@
 <details>
 <summary>8. 마이페이지</summary>
 
-![마이페이지 스크린샷](이미지 경로 1)  
-![마이페이지 스크린샷](이미지 경로 2)
+![simulator_screenshot_CA2EC95A-4CB1-4E5F-9D69-ECCB17E61FC2](https://github.com/user-attachments/assets/e19572d7-b5b8-4b7b-a616-5c87636f3c4a)
+![simulator_screenshot_0CD3D9E3-11A7-494E-9FEC-1E5DDE85AE78](https://github.com/user-attachments/assets/c28b1104-4366-4a87-8d7a-bf6cee813c7e)
+![simulator_screenshot_92CBB19F-F3C4-4345-B4EC-CA23309E795A](https://github.com/user-attachments/assets/0b388ed8-db9b-47e5-8f0d-0be9bef94921)
+![simulator_screenshot_055E37E3-3C27-4172-8E89-45E4C4F4DBF4](https://github.com/user-attachments/assets/87a00562-cc0f-4120-aab5-8a1458a89b0c)
 
 - 공지사항 및 이벤트 관리 (FB 연동)
 - 나의 찜 목록 관리
