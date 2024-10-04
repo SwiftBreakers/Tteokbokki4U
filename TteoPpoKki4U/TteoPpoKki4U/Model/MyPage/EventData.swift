@@ -5,7 +5,6 @@
 //  Created by 김건응 on 6/25/24.
 //
 
-import Foundation
 import UIKit
 
 struct EventData {

@@ -33,13 +33,13 @@ class MyScrapViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = .white
-//        setupBackButton()
+        //        setupBackButton()
         navigationController?.navigationBar.tintColor = ThemeColor.mainOrange
         navigationController?.navigationBar.barTintColor = .white
         
         setupSegmentedControl()
         setupCollectionView()
-       // navigationController?.isNavigationBarHidden = true
+        // navigationController?.isNavigationBarHidden = true
         bind()
     }
     
@@ -103,16 +103,16 @@ class MyScrapViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-//    func setupBackButton() {
-//        view.addSubview(backButton)
-//        
-//        backButton.snp.makeConstraints { make in
-//            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(10)
-//            make.leading.equalToSuperview().offset(20)
-//            make.trailing.equalToSuperview().offset(-340)
-//            make.height.equalTo(30)
-//        }
-//    }
+    //    func setupBackButton() {
+    //        view.addSubview(backButton)
+    //
+    //        backButton.snp.makeConstraints { make in
+    //            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(10)
+    //            make.leading.equalToSuperview().offset(20)
+    //            make.trailing.equalToSuperview().offset(-340)
+    //            make.height.equalTo(30)
+    //        }
+    //    }
     
     func setupSegmentedControl() {
         segmentedControl = UISegmentedControl(items: ["스크랩", "북마크"])
@@ -122,16 +122,16 @@ class MyScrapViewController: UIViewController {
         if traitCollection.userInterfaceStyle == .dark {
             segmentedControl.backgroundColor = .clear
             segmentedControl.selectedSegmentTintColor = .white
-                let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-                segmentedControl.setTitleTextAttributes(titleTextAttributes, for: .normal)
-                segmentedControl.setTitleTextAttributes(titleTextAttributes, for: .selected)
-            } else {
-                segmentedControl.backgroundColor = .clear
-                segmentedControl.selectedSegmentTintColor = .white
-                let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-                segmentedControl.setTitleTextAttributes(titleTextAttributes, for: .normal)
-                segmentedControl.setTitleTextAttributes(titleTextAttributes, for: .selected)
-            }
+            let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+            segmentedControl.setTitleTextAttributes(titleTextAttributes, for: .normal)
+            segmentedControl.setTitleTextAttributes(titleTextAttributes, for: .selected)
+        } else {
+            segmentedControl.backgroundColor = .clear
+            segmentedControl.selectedSegmentTintColor = .white
+            let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+            segmentedControl.setTitleTextAttributes(titleTextAttributes, for: .normal)
+            segmentedControl.setTitleTextAttributes(titleTextAttributes, for: .selected)
+        }
         
         view.addSubview(segmentedControl)
         
@@ -191,7 +191,7 @@ extension MyScrapViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    
+        
         if segmentedControl.selectedSegmentIndex == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ScrapCell", for: indexPath) as! ScrapCell
             let scrapItem = scrapViewModel.scrapArray[indexPath.row]
@@ -238,28 +238,15 @@ extension MyScrapViewController: UICollectionViewDelegate, UICollectionViewDataS
         } else {
             let bookmarkItem = bookmarkViewModel.bookmarkArray[indexPath.item]
             selectedIndex = segmentedControl.selectedSegmentIndex
-            Task {
-                ProgressHUD.animate()
-                await cardViewModel.fetchData()
-                let cards = cardViewModel.cards
-
-                var index = 0
-                for card in cards {
-                    if card.title == bookmarkItem.title {
-                        break
-                    } else {
-                        index += 1
-                    }
-                }
-                
-                ProgressHUD.dismiss()
-                let detailVC = DetailViewController()
-                detailVC.card = cardViewModel.card(at: index)
-                self.navigationController?.pushViewController(detailVC, animated: true)
-            }
+            ProgressHUD.dismiss()
+            let detailVC = DetailViewController()
+            detailVC.cardTitle = bookmarkItem.title
+            
+            self.navigationController?.pushViewController(detailVC, animated: true)
         }
     }
 }
+
 
 extension MyScrapViewController: ScrapCellDelegate {
     func didTapDeleteButton(on cell: ScrapCell) {

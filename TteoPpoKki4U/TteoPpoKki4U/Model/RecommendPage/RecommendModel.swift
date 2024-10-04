@@ -27,3 +27,10 @@ struct Item {
     let imageURL: URL
     var isDimmed: Bool
 }
+
+struct CardShell {
+    var title: String
+    var description: String
+    var imageURL: String
+    var order: Int
+}

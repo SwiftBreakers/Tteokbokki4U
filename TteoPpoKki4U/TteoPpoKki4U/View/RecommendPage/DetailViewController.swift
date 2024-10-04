@@ -8,10 +8,12 @@ import UIKit
 import SnapKit
 import Combine
 import FirebaseAuth
+import ProgressHUD
+import Kingfisher
 
 class DetailViewController: UIViewController, UISearchBarDelegate {
     
-    var card: Card?
+    
     let shopAddressLabel = UILabel()
     let imageURL = UILabel()
     let shopAddressButton = UIButton()
@@ -20,14 +22,7 @@ class DetailViewController: UIViewController, UISearchBarDelegate {
     let descriptionLabel = UILabel()
     let longDescription1Label = UILabel()
     let longDescription2Label = UILabel()
-    let collectionImageURL1 = UILabel()
-    let collectionImageView1 = UIImageView()
-    let collectionImageURL2 = UILabel()
-    let collectionImageView2 = UIImageView()
-    let collectionImageURL3 = UILabel()
-    let collectionImageView3 = UIImageView()
-    let collectionImageURL4 = UILabel()
-    let collectionImageView4 = UIImageView()
+
     let contentView = UIView()
     let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -50,6 +45,7 @@ class DetailViewController: UIViewController, UISearchBarDelegate {
     let barBookmarkButton = UIBarButtonItem()
     let barShareButton = UIBarButtonItem()
     var cancellables = Set<AnyCancellable>()
+    var cardTitle: String?
     
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowlayout)
     
@@ -80,16 +76,15 @@ class DetailViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        configureView()
         setupCollectionView()
         makeBarButton()
         bind()
-        items = [
-            Item(imageURL: URL(string: card!.collectionImageURL1)!, isDimmed: false),
-            Item(imageURL: URL(string: card!.collectionImageURL2)!, isDimmed: false),
-            Item(imageURL: URL(string: card!.collectionImageURL3)!, isDimmed: false),
-            Item(imageURL: URL(string: card!.collectionImageURL4)!, isDimmed: false)
-        ]
+        
+        
+        Task {
+            await viewModel.getSpecificRecommendation(title: cardTitle!)
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -100,13 +95,14 @@ class DetailViewController: UIViewController, UISearchBarDelegate {
         let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         self.navigationItem.backBarButtonItem = backBarButtonItem
         
-        if let title = card?.title {
+        if let title = cardTitle {
             Task {
                 await viewModel.fetchBookmarkStatus(title: title)
             }
         }
         setLabelLineSpacing()
     }
+    
     
     private func setLabelLineSpacing() {
         longDescription1Label.setLineSpacing(lineSpacing: 12)
@@ -184,6 +180,16 @@ class DetailViewController: UIViewController, UISearchBarDelegate {
         }
     }
     private func bind() {
+        ProgressHUD.animate()
+        viewModel.$card
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] cards in
+                guard let card = cards.first else { return }
+                self?.configureView(with: card)
+                ProgressHUD.dismiss()
+            }
+            .store(in: &cancellables)
+        
         viewModel.$isBookmarked
             .receive(on: DispatchQueue.main)
             .sink { [weak self] isBookmarked in
@@ -192,8 +198,7 @@ class DetailViewController: UIViewController, UISearchBarDelegate {
             .store(in: &cancellables)
     }
     
-    private func configureView() {
-        guard let card = card else { return }
+    private func configureView(with card: Card) {
         titleLabel.text = card.title
         descriptionLabel.text = card.description
         descriptionLabel.font = ThemeFont.fontRegular(size: 20)
@@ -205,54 +210,65 @@ class DetailViewController: UIViewController, UISearchBarDelegate {
         addressString.addAttribute(.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: card.shopAddress.count))
         shopAddressButton.setAttributedTitle(addressString, for: .normal)
         
-        if let url = URL(string: card.imageURL) {
-            imageView.kf.setImage(with: url)
-        } else {
-            imageView.image = nil // Placeholder image or nil
+        Task {
+            // 메인 이미지 로드
+            if let imageURL = try? await viewModel.convertGSURLToHTTPURL(gsURL: card.imageURL),
+               let url = URL(string: imageURL) {
+                imageView.kf.setImage(with: url)
+            } else {
+                imageView.image = nil
+            }
+            
+            // 컬렉션 이미지 로드
+            let collectionImageURLs = await [
+                try? viewModel.convertGSURLToHTTPURL(gsURL: card.collectionImageURL1),
+                try? viewModel.convertGSURLToHTTPURL(gsURL: card.collectionImageURL2),
+                try? viewModel.convertGSURLToHTTPURL(gsURL: card.collectionImageURL3),
+                try? viewModel.convertGSURLToHTTPURL(gsURL: card.collectionImageURL4)
+            ].compactMap { $0 }
+
+            items = collectionImageURLs.map { Item(imageURL: URL(string: $0)!, isDimmed: false) }
+            
+            collectionView.reloadData()
         }
     }
     
     private func setupViews() {
-        
         view.backgroundColor = .white
-        
         contentView.backgroundColor = .white
-        
         imageView.contentMode = .scaleToFill
-        
+
         titleLabel.textColor = .white
         titleLabel.font = ThemeFont.fontBold(size: 40)
         titleLabel.numberOfLines = 0
         titleLabel.textAlignment = .left
-        
+
         descriptionLabel.textColor = .white
         descriptionLabel.font = ThemeFont.fontRegular(size: 16)
         descriptionLabel.numberOfLines = 0
         descriptionLabel.textAlignment = .left
-        
+
         shopAddressLabel.text = "주소"
         shopAddressLabel.font = ThemeFont.fontBold(size: 18)
         shopAddressLabel.textColor = ThemeColor.mainBlack
-        
+
         shopAddressButton.setTitleColor(ThemeColor.mainBlack, for: .normal)
         shopAddressButton.titleLabel?.font = ThemeFont.fontRegular(size: 18)
         shopAddressButton.titleLabel?.numberOfLines = 2
         shopAddressButton.addTarget(self, action: #selector(moveToMap), for: .touchUpInside)
-        
+
         longDescription1Label.font = ThemeFont.fontRegular(size: 16)
         longDescription1Label.numberOfLines = 100
         longDescription1Label.textAlignment = .left
         longDescription1Label.textColor = ThemeColor.mainBlack
-        
+
         longDescription2Label.font = ThemeFont.fontRegular(size: 16)
         longDescription2Label.numberOfLines = 100
         longDescription2Label.textAlignment = .left
         longDescription2Label.textColor = ThemeColor.mainBlack
-        
+
         view.addSubview(scrollView)
-        
         scrollView.addSubview(contentView)
-        
         contentView.addSubview(imageView)
         imageView.addSubview(titleLabel)
         imageView.addSubview(descriptionLabel)
@@ -262,61 +278,62 @@ class DetailViewController: UIViewController, UISearchBarDelegate {
         contentView.addSubview(longDescription2Label)
         contentView.addSubview(shopAddressButton)
         
-        //오토레이아웃 설정
-        
+        // 오토레이아웃 설정
         scrollView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-        
+
         contentView.snp.makeConstraints { make in
             make.edges.equalTo(scrollView.contentLayoutGuide)
             make.width.equalTo(scrollView.frameLayoutGuide)
         }
-        
+
         imageView.snp.makeConstraints { make in
             make.top.equalTo(contentView.snp.top).offset(10)
-            make.leading.equalTo(contentView.safeAreaLayoutGuide)
-            make.trailing.equalTo(contentView.safeAreaLayoutGuide)
+            make.leading.trailing.equalTo(contentView.safeAreaLayoutGuide)
             make.height.equalTo(500)
         }
-        
+
         titleLabel.snp.makeConstraints { make in
             make.bottom.equalTo(descriptionLabel.snp.top).offset(-10)
             make.leading.equalTo(imageView.snp.leading).offset(30)
             make.trailing.equalTo(imageView.snp.trailing).offset(-30)
         }
-        
+
         descriptionLabel.snp.makeConstraints { make in
             make.bottom.equalTo(imageView.snp.bottom).offset(-50)
             make.leading.equalTo(imageView.snp.leading).offset(30)
             make.trailing.equalTo(imageView.snp.trailing).offset(-30)
-            make.left.equalTo(titleLabel)
         }
+
         longDescription1Label.snp.makeConstraints { make in
             make.top.equalTo(imageView.snp.bottom).offset(20)
             make.leading.equalTo(contentView.safeAreaLayoutGuide).offset(20)
             make.trailing.equalTo(contentView.safeAreaLayoutGuide).offset(-20)
         }
+
         collectionView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
             make.top.equalTo(longDescription1Label.snp.bottom).offset(20)
             make.height.equalTo(200)
         }
+
         longDescription2Label.snp.makeConstraints { make in
             make.top.equalTo(collectionView.snp.bottom).offset(20)
             make.leading.equalTo(contentView.safeAreaLayoutGuide).offset(20)
             make.trailing.equalTo(contentView.safeAreaLayoutGuide).offset(-20)
         }
+
         shopAddressLabel.snp.makeConstraints { make in
             make.top.equalTo(longDescription2Label.snp.bottom).offset(20)
             make.leading.equalTo(contentView.safeAreaLayoutGuide).offset(20)
-            make.bottom.equalToSuperview().offset(-20)
         }
+
         shopAddressButton.snp.makeConstraints { make in
-            make.top.equalTo(longDescription2Label.snp.bottom).offset(20)
             make.leading.equalTo(shopAddressLabel.snp.trailing).offset(20)
-            make.trailing.equalTo(contentView.safeAreaLayoutGuide).offset(-150)
+            make.trailing.equalTo(contentView.safeAreaLayoutGuide).offset(-120)
             make.centerY.equalTo(shopAddressLabel)
+            make.bottom.equalTo(contentView.snp.bottom).offset(-20)
         }
     }
     
@@ -346,32 +363,30 @@ extension DetailViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         self.items.count
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailCollectionViewCell.identifier, for: indexPath) as! DetailCollectionViewCell
         let item = self.items[indexPath.item]
         cell.prepare(imageURL: item.imageURL, isDimmed: item.isDimmed)
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! DetailCollectionViewCell
-        let _ = cell.imageView.image
-        
         let fullscreenPageVC = FullscreenPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-            fullscreenPageVC.modalPresentationStyle = .fullScreen
-            fullscreenPageVC.imageURLs = getAllImageURLs() // 모든 이미지 배열을 전달
-            fullscreenPageVC.currentIndex = indexPath.item
-            
-            self.present(fullscreenPageVC, animated: true, completion: nil)
+        fullscreenPageVC.modalPresentationStyle = .fullScreen
+        fullscreenPageVC.imageURLs = items.map { $0.imageURL }
+        fullscreenPageVC.currentIndex = indexPath.item
+        self.present(fullscreenPageVC, animated: true, completion: nil)
     }
-    func getAllImageURLs() -> [URL] {
-        // 여기서 모든 이미지를 반환합니다.
-        return [
-            URL(string: card!.collectionImageURL1)!,
-            URL(string: card!.collectionImageURL2)!,
-            URL(string: card!.collectionImageURL3)!,
-            URL(string: card!.collectionImageURL4)!
-        ]
-    }
+    //    func getAllImageURLs() -> [URL] {
+    //        // 여기서 모든 이미지를 반환합니다.
+    ////        return [
+    ////            URL(string: card!.collectionImageURL1)!,
+    ////            URL(string: card!.collectionImageURL2)!,
+    ////            URL(string: card!.collectionImageURL3)!,
+    ////            URL(string: card!.collectionImageURL4)!
+    ////        ]
+    //    }
 }
 extension DetailViewController: UICollectionViewDelegateFlowLayout {
     

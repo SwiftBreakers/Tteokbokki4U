@@ -43,7 +43,7 @@ public class MyCardCell: CardCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    public func configure(with card: Card) {
+    func configure(with card: CardShell) {
         titleLabel.text = card.title
         descriptionLabel.text = card.description
         imageURL.text = card.imageURL
@@ -151,5 +151,3 @@ public class MyCardCell: CardCell {
     }
     
 }
-
-

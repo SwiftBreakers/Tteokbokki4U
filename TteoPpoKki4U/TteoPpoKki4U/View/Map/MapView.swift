@@ -35,7 +35,7 @@ class MapView: UIView {
     }()
     let findMyLocationBtn: UIButton = {
         let btn = UIButton()
-        btn.setImage(UIImage(systemName: "safari"), for: .normal)
+        btn.setImage(UIImage(systemName: "location.fill"), for: .normal)
         btn.backgroundColor = .white
         btn.tintColor = .black
         btn.layer.cornerRadius = 22
@@ -86,7 +86,7 @@ class MapView: UIView {
         }
         
         findMyLocationBtn.imageView?.snp.makeConstraints { make in
-            make.width.height.equalTo(findMyLocationBtn.snp.width)
+            make.width.height.equalTo(findMyLocationBtn.snp.width).inset(8)
         }
         
         compassBtn.snp.makeConstraints { make in

@@ -34,6 +34,7 @@ class MyPageViewController: UIViewController {
     private var currentImageUrl: String?
     public var currentName: String?
     public var currentRank: String?
+
     
     convenience init(signOutTapped: @escaping () -> Void, editTapped:@escaping () -> Void, viewModel: SignViewModel) {
         self.init()
@@ -216,11 +217,6 @@ extension MyPageViewController: UICollectionViewDataSource, UICollectionViewDele
             } else {
                 signOutTapped!()
             }
-            
-            
-        case [0, 1]:
-            let EventVC = EventPageViewController()
-            navigationController?.pushViewController(EventVC, animated: true)
             
         default:
             return

@@ -8,7 +8,7 @@
 import UIKit
 
 class ThemeColor {
-    static let mainOrange = UIColor(hexString: "FE724C")
+    static let mainOrange = UIColor(hexString: "FF7043")
     static let mainGreen = UIColor(hexString: "549956")
     static let mainBlack = UIColor(hexString: "353535")
 }
