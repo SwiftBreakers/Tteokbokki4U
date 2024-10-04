@@ -23,14 +23,12 @@
 
 
 ## 팀원소개
-*  **송동익** ([Haroldfromk](https://github.com/haroldfromk))
-    -  로그인 페이지, 관리자 페이지, 커뮤니티 페이지, 팀 내 Bug Fix, Git 문제 해결
-*  **박미림** ([moremirim](https://github.com/moremirim))
-    -  마이페이지, 리뷰 페이지, 공공 데이터 전처리, UI 보완
-*  **박준영** ([labydin](https://github.com/labydin))
-    -  지도 페이지, 가게 정보 페이지, UI 보완
-*  **최진문** ([jinmoon23](https://github.com/jinmoon23))
-    -  추천 페이지, 에디터 글 작성
+| 이름       | GitHub                                   | 역할                                         | 이메일             |
+|------------|-----------------------------------------|----------------------------------------------|--------------------|
+| **송동익** | [Haroldfromk](https://github.com/haroldfromk) | 로그인 페이지, 관리자 페이지, 커뮤니티 페이지, 팀 내 Bug Fix, Git 문제 해결 | [dongik369@naver.com](mailto:dongik369@naver.com) |
+| **박미림** | [moremirim](https://github.com/moremirim) | 마이페이지, 리뷰 페이지, 공공 데이터 전처리, UI 보완 | [moremirim@gmail.com](mailto:moremirim@gmail.com) |
+| **박준영** | [labydin](https://github.com/labydin) | 지도 페이지, 가게 정보 페이지, UI 보완 | [jlabydin@naver.com](mailto:labydin@naver.com) |
+| **최진문** | [jinmoon23](https://github.com/jinmoon23) | 추천 페이지, 에디터 글 작성 | [rlawjsdlf13@naver.com](mailto:rlawjsdlf13@naver.com) |
 
 ## 타임라인
 
