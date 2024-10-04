@@ -10,7 +10,9 @@
 # 떡볶이4U
 <img src="https://img.shields.io/badge/Apple-%23000000.svg?style=for-the-badge&logo=apple&logoColor=white" height="20"> <img src="https://img.shields.io/badge/iOS-16.0%2B-orange"> <img src="https://img.shields.io/badge/Library-Combine-orange "> <img src="https://img.shields.io/badge/Library-Firebase-orange "> <img src="https://img.shields.io/badge/Library-KakaoOpenSDK-orange "> <img src="https://img.shields.io/badge/Library-SkeletonView-orange ">
 
-[![앱스토어에서 보기](https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg)](https://apps.apple.com/us/app/%EB%96%A1%EB%B3%B6%EC%9D%B44u/id6503482348){:target="_blank"}
+<a href="https://apps.apple.com/us/app/%EB%96%A1%EB%B3%B6%EC%9D%B44u/id6503482348" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Apple-logo.png" alt="앱스토어에서 보기" width="100" height="100">
+</a>
 
 앱스토어 링크 이미지를 클릭하거나 링크를 통해 바로 확인할 수 있습니다!
 ## 소개
