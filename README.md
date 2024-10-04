@@ -30,7 +30,7 @@
 <details>
 <summary>1. 로그인</summary>
 
-![simulator_screenshot_C24379EE-13FD-4003-BC9F-3AABF8833397](https://github.com/user-attachments/assets/3bc8d2ea-680f-4042-a016-4557df80632c) 
+![simulator_screenshot_C24379EE-13FD-4003-BC9F-3AABF8833397](https://github.com/user-attachments/assets/3bc8d2ea-680f-4042-a016-4557df80632c){: width="200" height="430"} 
 ![simulator_screenshot_E9C791E9-C767-4AA1-82E8-C155154A0B81](https://github.com/user-attachments/assets/922ae6c8-83a7-41f4-9385-e6c53ceb10ca)
 
 - 소셜 로그인 : 애플, 구글
