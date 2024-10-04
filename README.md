@@ -1,11 +1,12 @@
 # Table of Contents
 1. [소개](#소개)
 2. [팀원소개](#팀원소개)
-3. [기능소개](#기능소개)
-4. [기술스택](#기술스택)
-5. [기술적 의사결정](#기술적-의사결정)
-6. [트러블슈팅](#트러블슈팅)
-7. [애플 및 유져의 피드백 반영](#애플-및-유져의-피드백-반영)
+3. [타임라인](#타임라인)
+4. [기능소개](#기능소개)
+5. [기술스택](#기술스택)
+6. [기술적 의사결정](#기술적-의사결정)
+7. [트러블슈팅](#트러블슈팅)
+8. [애플 및 유져의 피드백 반영](#애플-및-유져의-피드백-반영)
 
 # 떡볶이4U
 <img src="https://img.shields.io/badge/Apple-%23000000.svg?style=for-the-badge&logo=apple&logoColor=white" height="20"> <img src="https://img.shields.io/badge/iOS-16.0%2B-orange"> <img src="https://img.shields.io/badge/Library-Combine-orange "> <img src="https://img.shields.io/badge/Library-Firebase-orange "> <img src="https://img.shields.io/badge/Library-KakaoOpenSDK-orange "> <img src="https://img.shields.io/badge/Library-SkeletonView-orange ">
@@ -31,6 +32,60 @@
 *  **최진문** ([jinmoon23](https://github.com/jinmoon23))
     -  추천 페이지, 에디터 글 작성, 리뷰 이벤트 진행 및 예산 관리
 
+## 타임라인
+
+<details>
+<summary>1주차 (5월 27일 - 6월 2일)</summary>
+
+- 앱 기획 회의
+- 가게 상세 페이지에서 리뷰 작성 페이지로의 링크 기능 추가하여 사용성 높임.
+- 카카오 API로 주소 형식 일괄 처리.
+- 계정 삭제 기능 추가, 사용자 데이터 안전하게 제거 가능.
+
+</details>
+
+<details>
+<summary>2주차 (6월 3일 - 6월 9일)</summary>
+
+- 스토리지 이미지 누적 문제 해결하여 효율성 개선.
+- 관리자 페이지에 ‘이스터 에그’ 설정, 사용자 차단 기능 추가.
+- 프로필 업데이트 시 예외 처리 및 차단 로직 추가.
+
+</details>
+
+<details>
+<summary>3주차 (6월 10일 - 6월 16일)</summary>
+
+- 시스템 컬러 업데이트, 앱 홍보 자료 준비.
+- 로그인 페이지 UI 제약 조건 조정으로 사용자 경험 개선.
+- 커뮤니티 페이지 UI 개선, 게스트 접근 제한.
+
+</details>
+
+<details>
+<summary>4주차 (6월 17일 - 6월 23일)</summary>
+
+- '내 위치 찾기' 버튼 추가, 레이아웃 조정으로 접근성 향상.
+- 두 번째 앱 업데이트로 커뮤니티 탭 추가 및 사용자 피드백 반영.
+- 모든 뷰에 뒤로가기 버튼 스타일 통일, dismiss 관련 네비게이션 문제 해결.
+
+</details>
+
+<details>
+<summary>5주차 (6월 24일 - 6월 30일)</summary>
+
+- 최종 테스트 및 사용자 인터페이스와 기능성 검토 완료.
+- 피드백 기반 세부 수정.
+
+</details>
+
+<details>
+<summary>6주차 (7월 1일 - 7월 4일)</summary>
+
+- 출시 후 초기 사용자 피드백 수집 및 버그 수정.
+- 초기 리뷰 반영해 UI와 기능 개선.
+
+</details>
 
 ## 기능소개
 
