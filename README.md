@@ -26,7 +26,7 @@
 
 | 이름         | 역할                                                                                              | GitHub                                   | 이메일                                       |
 |--------------|--------------------------------------------------------------------------------------------------|-----------------------------------------|---------------------------------------------|
-| **송동익** 👨🏻‍💻 | 로그인 페이지, 관리자 페이지, 커뮤니티 페이지, 팀 내 Bug Fix 🐛, Git 문제 해결 🚀                | [Haroldfromk](https://github.com/haroldfromk) | [dongik369@naver.com](mailto:dongik369@naver.com) |
+| **송동익** 👨🏻‍💻 | 로그인 페이지, 관리자 페이지, 커뮤니티 페이지, 팀 내 Bug Fix 🛠️, Git 문제 해결 🚀                | [Haroldfromk](https://github.com/haroldfromk) | [dongik369@naver.com](mailto:dongik369@naver.com) |
 | **박미림** 👩🏻‍💻 | 마이페이지, 리뷰 페이지, 공공 데이터 전처리 📊, UI 보완 🎨                                      | [moremirim](https://github.com/moremirim) | [moremirim@gmail.com](mailto:moremirim@gmail.com) |
 | **박준영** 👩🏻‍💻 | 지도 페이지, 가게 정보 페이지 🗺️, UI 보완 🎨                                                    | [labydin](https://github.com/labydin)     | [labydin@naver.com](mailto:labydin@naver.com) |
 | **최진문** 👨🏻‍💻 | 추천 페이지, 에디터 글 작성 ✍️                                                                 | [jinmoon23](https://github.com/jinmoon23) | [rlawjsdlf13@naver.com](mailto:rlawjsdlf13@naver.com) |
