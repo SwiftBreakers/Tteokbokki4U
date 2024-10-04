@@ -30,7 +30,7 @@
 *  **박준영** ([labydin](https://github.com/labydin))
     -  지도 페이지, 가게 정보 페이지, UI 보완
 *  **최진문** ([jinmoon23](https://github.com/jinmoon23))
-    -  추천 페이지, 에디터 글 작성, 리뷰 이벤트 진행 및 예산 관리
+    -  추천 페이지, 에디터 글 작성
 
 ## 타임라인
 
