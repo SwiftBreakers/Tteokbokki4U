@@ -123,7 +123,7 @@
 <img src="https://github.com/user-attachments/assets/797ff426-686d-4ec3-8420-3d414702040e" width="200" height="430">
 <img src="https://github.com/user-attachments/assets/8798eefb-9b03-4c9b-a7ed-761f983cec43" width="200" height="430">
 
-- [VerticalCardSwiper](https://github.com/JoniVR/VerticalCardSwiper){:target="_blank"} 라이브러리를 사용한 잡지 형식의 둘러보기
+- [VerticalCardSwiper](https://github.com/JoniVR/VerticalCardSwiper) 라이브러리를 사용한 잡지 형식의 둘러보기
 - Card cell 클릭 시 디테일 페이지로 이동
 - 에디터의 추천글, 상세 이미지, 가게 주소 제공
 - FB 연동으로 맛집 소개 관리
