@@ -15,7 +15,7 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="앱스토어에서 보기" width="45" height="45">
 </a>    
 
-앱스토어 링크 이미지를 클릭하여 바로 확인할 수 있습니다.
+> 앱스토어 링크 이미지를 클릭하여 바로 확인할 수 있습니다.
 
 [프로젝트 요약 이미지 보기](https://github.com/user-attachments/assets/54838cdc-5770-4fcc-bae8-d2c7ae0f4697)
 > 위 링크를 클릭하면 프로젝트 요약 이미지를 볼 수 있습니다.
