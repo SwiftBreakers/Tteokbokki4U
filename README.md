@@ -12,7 +12,9 @@
 
 <a href="https://apps.apple.com/us/app/%EB%96%A1%EB%B3%B6%EC%9D%B44u/id6503482348" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="앱스토어에서 보기" width="45" height="45">
-</a>    앱스토어 링크 이미지를 클릭하여 바로 확인할 수 있습니다.
+</a>    
+
+앱스토어 링크 이미지를 클릭하여 바로 확인할 수 있습니다.
 
 ## 소개
 
