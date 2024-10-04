@@ -13,11 +13,12 @@
 
 <a href="https://apps.apple.com/us/app/%EB%96%A1%EB%B3%B6%EC%9D%B44u/id6503482348" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="앱스토어에서 보기" width="45" height="45">
-</a> <a href="https://github.com/user-attachments/assets/54838cdc-5770-4fcc-bae8-d2c7ae0f4697" target="_blank">
+</a>
+<a href="https://github.com/user-attachments/assets/54838cdc-5770-4fcc-bae8-d2c7ae0f4697" target="_blank">
     <img src="https://github.com/user-attachments/assets/eb732610-f2b8-4b3e-a9fa-c47ddf22e7d2" alt="프로젝트 요약 이미지 보기" width="45" height="45">
 </a>    
 
-> 이미지 아이콘(앱스토어, 프로젝트요약 이미지)을 클릭하여 바로 확인할 수 있습니다.
+> 위 아이콘을 클릭해 [앱스토어](https://apps.apple.com/us/app/%EB%96%A1%EB%B3%B6%EC%9D%B44u/id6503482348) 또는 [프로젝트 요약 이미지](https://github.com/user-attachments/assets/54838cdc-5770-4fcc-bae8-d2c7ae0f4697)를 확인하세요.
 
 ## 소개
 
