@@ -17,6 +17,14 @@
 
 앱스토어 링크 이미지를 클릭하여 바로 확인할 수 있습니다.
 
+<div align="center">
+
+[![떡볶이 프로젝트 요약](https://github.com/user-attachments/assets/54838cdc-5770-4fcc-bae8-d2c7ae0f4697)](https://github.com/SwiftBreakers/TTEOPPOKKI4U)
+
+**떡볶이4U 프로젝트**  
+[프로젝트 바로 가기](https://github.com/SwiftBreakers/TTEOPPOKKI4U)
+</div>
+
 ## 소개
 
 ![TPK_poster](https://github.com/user-attachments/assets/54c5ef79-f0ab-4ac1-b1c4-0679b651279d)
