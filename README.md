@@ -19,9 +19,6 @@
 
 > 이미지 아이콘(앱스토어, 프로젝트요약 이미지)을 클릭하여 바로 확인할 수 있습니다.
 
-[프로젝트 요약 이미지 보기](https://github.com/user-attachments/assets/54838cdc-5770-4fcc-bae8-d2c7ae0f4697)
-> 위 링크를 클릭하면 프로젝트 요약 이미지를 볼 수 있습니다.
-
 ## 소개
 
 ![TPK_poster](https://github.com/user-attachments/assets/54c5ef79-f0ab-4ac1-b1c4-0679b651279d)
