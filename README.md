@@ -8,7 +8,7 @@
 7. [트러블슈팅](#트러블슈팅)
 8. [애플 및 유져의 피드백 반영](#애플-및-유져의-피드백-반영)
 
-# 떡볶이4U
+# <img src="https://github.com/user-attachments/assets/621f7c7b-44af-4e54-9c97-ca68b15fdc17" alt="AppIcon" width="30" height="30" style="border-radius: 50%;"> 떡볶이4U
 <img src="https://img.shields.io/badge/Apple-%23000000.svg?style=for-the-badge&logo=apple&logoColor=white" height="20"> <img src="https://img.shields.io/badge/iOS-16.0%2B-orange"> <img src="https://img.shields.io/badge/Library-Combine-orange "> <img src="https://img.shields.io/badge/Library-Firebase-orange "> <img src="https://img.shields.io/badge/Library-KakaoOpenSDK-orange "> <img src="https://img.shields.io/badge/Library-SkeletonView-orange ">
 
 <a href="https://apps.apple.com/us/app/%EB%96%A1%EB%B3%B6%EC%9D%B44u/id6503482348" target="_blank">
