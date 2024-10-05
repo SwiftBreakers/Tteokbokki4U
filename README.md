@@ -3,13 +3,14 @@
 2. [팀원소개](#팀원소개)
 3. [타임라인](#타임라인)
 4. [기능소개](#기능소개)
-5. [기술스택](#기술스택)
-6. [기술적 의사결정](#기술적-의사결정)
-7. [트러블슈팅](#트러블슈팅)
-8. [애플 및 유져의 피드백 반영](#애플-및-유져의-피드백-반영)
+5. [개발환경](#개발환경)
+6. [기술스택](#기술스택)
+7. [기술적 의사결정](#기술적-의사결정)
+8. [트러블슈팅](#트러블슈팅)
+9. [애플 및 유져의 피드백 반영](#애플-및-유져의-피드백-반영)
 
 # <img src="https://github.com/user-attachments/assets/621f7c7b-44af-4e54-9c97-ca68b15fdc17" alt="AppIcon" width="30" height="30" style="border-radius: 50%;"> 떡볶이4U
-<img src="https://img.shields.io/badge/Apple-%23000000.svg?style=for-the-badge&logo=apple&logoColor=white" height="20"> <img src="https://img.shields.io/badge/iOS-16.0%2B-orange"> <img src="https://img.shields.io/badge/Library-Combine-orange "> <img src="https://img.shields.io/badge/Library-Firebase-orange "> <img src="https://img.shields.io/badge/Library-KakaoOpenSDK-orange "> <img src="https://img.shields.io/badge/Library-SkeletonView-orange ">
+<img src="https://img.shields.io/badge/Apple-%23000000.svg?style=for-the-badge&logo=apple&logoColor=white" height="20"> <img src="https://img.shields.io/badge/iOS-15.0%2B-orange"> <img src="https://img.shields.io/badge/Library-Combine-orange "> <img src="https://img.shields.io/badge/Library-Firebase-orange "> <img src="https://img.shields.io/badge/Library-KakaoOpenSDK-orange "> <img src="https://img.shields.io/badge/Library-SkeletonView-orange ">
 
 <a href="https://apps.apple.com/us/app/%EB%96%A1%EB%B3%B6%EC%9D%B44u/id6503482348" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="앱스토어에서 보기" width="45" height="45">
@@ -202,6 +203,13 @@
 
 </details>
 
+## 개발환경
+
+- **🖥 OS**: macOS Sonoma 13.67 / 14.0 / 14.5
+- **🛠 Xcode**: 15.2 / 15.3 / 15.4
+- **💻 Language**: Swift
+- **📱 iOS Version**: 15.0
+
 ## 기술스택
 - **Environment**
 
@@ -213,7 +221,7 @@
 
 - **Collaboration Tool**
 
-    <img src="https://img.shields.io/badge/-slack-4A154B?style=flat&logo=slack&logoColor=white"/> <img src="https://img.shields.io/badge/-notion-000000?style=flat&logo=notion&logoColor=white"/> 
+    <img src="https://img.shields.io/badge/-slack-4A154B?style=flat&logo=slack&logoColor=white"/> <img src="https://img.shields.io/badge/-notion-000000?style=flat&logo=notion&logoColor=white"/> <img src="https://img.shields.io/badge/-figma-F24E1E?style=flat&logo=figma&logoColor=white"/> 
 
 ---
 
